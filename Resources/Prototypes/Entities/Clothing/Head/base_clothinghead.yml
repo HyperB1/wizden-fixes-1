@@ -141,25 +141,19 @@
 
 - type: entity
   abstract: true
-  # No parent since we aren't actually an item.
+  parent: ClothingHeadBase
   id: ClothingHeadHardsuitBase
   name: base hardsuit helmet
-  categories: [ HideSpawnMenu ]
   components:
 # SlotBlocker blocked until UI change
 #  - type: SlotBlock
 #    slots: [ears, eyes, mask]
   - type: BreathMask
-  - type: Sprite
-    state: icon # default state used by most inheritors
-  - type: Clickable
-  - type: InteractionOutline
   - type: Clothing
     #Apparently the hardsuit helmet equip sound is from a walking mech?
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
     quickEquip: false
-    slots: [ HEAD ]
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
