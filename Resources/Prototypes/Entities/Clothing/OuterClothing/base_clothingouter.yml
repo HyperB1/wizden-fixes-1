@@ -119,23 +119,16 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing]
+  parent: [ClothingOuterEVASuitBase, GeigerCounterClothing]
   id: ClothingOuterHardsuitBase
   name: base hardsuit
   components:
-# SlotBlocker blocked until UI change
-#  - type: SlotBlock
-#    slots: [innerclothing, feet]
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01
-    coolingCoefficient: 0.01
   - type: ClothingSpeedModifier
     walkModifier: 0.6
     sprintModifier: 0.6
-  - type: HeldSpeedModifier
   - type: Item
     size: Ginormous
   - type: Armor
@@ -156,16 +149,6 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
-  - type: ProtectedFromStepTriggers
-    slots: WITHOUT_POCKET
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10 # the average lightbulb only does around four damage!
-    slots: OUTERCLOTHING
-  - type: HideLayerClothing
-    slots:
-    - Tail
 
 - type: entity
   abstract: true

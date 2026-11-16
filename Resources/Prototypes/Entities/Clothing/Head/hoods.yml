@@ -10,6 +10,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/general.rsi
   - type: BreathMask
+  - type: IdentityBlocker
   - type: IngestionBlocker
   - type: GroupExamine
   - type: Armor
@@ -33,7 +34,6 @@
   suffix: CMO
   description: An advanced hood for chief medical officers that protects the head and face from biological contaminants.
   components:
-  - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
   - type: Clothing
@@ -48,7 +48,6 @@
   suffix: Janitor
   description: A hood that protects the head and face from biological contaminants.
   components:
-  - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
   - type: Clothing
@@ -61,7 +60,6 @@
   suffix: Science
   description: A hood that protects the head and face from biological contaminants.
   components:
-  - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
   - type: Clothing
@@ -74,7 +72,6 @@
   suffix: Security
   description: A hood that protects the head and face from biological contaminants.
   components:
-  - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/security.rsi
   - type: Clothing
@@ -87,7 +84,6 @@
   suffix: Virology
   description: A hood that strongly protects the head and face from biological contaminants.
   components:
-  - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
   - type: Clothing
@@ -177,6 +173,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodGoliathCloak
+  categories: [ HideSpawnMenu ]
   name: goliath cloak hood
   description: A hood of a goliath cloak, it is made from the hide of resilient fauna from a distant planet.
   components:
@@ -245,6 +242,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodMoth
+  categories: [ HideSpawnMenu ]
   name: moth mask
   description: A mask in the form of a moths head is usually made of lightweight materials. It mimics the shape of a moths head with large eyes and long antennae. Such masks are often used in cosplay, or when shooting movies and videos.
   components:

@@ -278,7 +278,6 @@
   categories: [ HideSpawnMenu ]
   name: salvager maxim helmet
   description: A predication of decay washes over your mind.
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/maxim.rsi
