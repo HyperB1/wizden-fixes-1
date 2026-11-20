@@ -44,7 +44,7 @@
     sprite: Clothing/OuterClothing/Suits/janitor_bombsuit.rsi
 
 - type: entity
-  parent: [ ClothingOuterBaseLargeFireproof, AllowSuitStorageClothing ]
+  parent: ClothingOuterBaseLargeFireproof
   id: ClothingOuterSuitFire
   name: fire suit
   description: A suit that helps protect against hazardous temperatures.
@@ -96,7 +96,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, GeigerCounterClothing, AllowSuitStorageClothing]
+  parent: [ClothingOuterBaseLarge, GeigerCounterClothing]
   id: ClothingOuterSuitRad
   name: radiation suit
   description: "A suit that protects against radiation. The label reads, 'Made with lead. Please do not consume insulation.'"
@@ -126,7 +126,7 @@
     - Tail
 
 - type: entity
-  parent: [ ClothingOuterBaseLargeInsulated, AllowSuitStorageClothing, BaseToggleClothing, BaseHighlyIllegalContraband ]
+  parent: [ClothingOuterBaseLargeInsulated, BaseToggleClothing, BaseHighlyIllegalContraband]
   id: ClothingOuterSuitSpaceNinja
   name: space ninja suit
   description: This black technologically advanced, cybernetically-enhanced suit provides many abilities like invisibility or teleportation.

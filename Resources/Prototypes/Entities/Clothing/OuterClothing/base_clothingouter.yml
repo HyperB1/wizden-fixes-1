@@ -21,7 +21,7 @@
 
 - type: entity
   abstract: true
-  parent: ClothingOuterBase
+  parent: [ClothingOuterBase, AllowSuitStorageClothing]
   id: ClothingOuterBaseLarge
   components:
   - type: Item
@@ -153,7 +153,7 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingOuterBaseLargeInsulated, AllowSuitStorageClothing]
+  parent: ClothingOuterBaseLargeInsulated
   id: ClothingOuterEVASuitBase
   name: base EVA Suit
   components:

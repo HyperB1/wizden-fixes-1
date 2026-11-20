@@ -19,8 +19,8 @@
   abstract: true
   id: GeigerCounterClothing
   components:
-    - type: Geiger
-      attachedToSuit: true
+  - type: Geiger
+    attachedToSuit: true
 
 - type: entity
   abstract: true
