@@ -12,6 +12,16 @@
 - type: entity
   abstract: true
   parent: ClothingOuterBase
+  id: ClothingOuterBaseMedium
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,2,3
+
+- type: entity
+  abstract: true
+  parent: ClothingOuterBase
   id: ClothingOuterBaseLarge
   components:
   - type: Item
@@ -23,6 +33,21 @@
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
+
+- type: entity
+  abstract: true
+  parent: ClothingOuterBase
+  id: ClothingOuterBaseToggleable
+  name: hoodie with hood
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterDefault
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
 
 - type: entity
   abstract: true
@@ -105,50 +130,8 @@
 
 - type: entity
   abstract: true
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, ClothingOuterBaseToggleable]
   id: ClothingOuterStorageToggleableBase
-  components:
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodWinterDefault
-    slot: head
-  - type: ContainerContainer
-    containers:
-      toggleable-clothing: !type:ContainerSlot {}
-      storagebase: !type:Container
-        ents: []
-
-- type: entity
-  abstract: true
-  parent: [ClothingOuterEVASuitBase, GeigerCounterClothing]
-  id: ClothingOuterHardsuitBase
-  name: base hardsuit
-  components:
-  - type: PressureProtection
-    highPressureMultiplier: 0.3
-    lowPressureMultiplier: 1000
-  - type: ClothingSpeedModifier
-    walkModifier: 0.6
-    sprintModifier: 0.6
-  - type: Item
-    size: Ginormous
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.90
-        Slash: 0.90
-        Piercing: 0.95
-        Heat: 0.90
-        Radiation: 0.25
-  - type: ToggleableClothing
-    slot: head
-  - type: ContainerContainer
-    containers:
-      toggleable-clothing: !type:ContainerSlot {}
-  - type: GroupExamine
-  - type: Tag
-    tags:
-    - Hardsuit
-    - WhitelistChameleon
 
 - type: entity
   abstract: true
@@ -183,26 +166,34 @@
     - Tail
 
 - type: entity
-  parent: ClothingOuterBase
-  id: ClothingOuterBaseToggleable
-  name: hoodie with hood
-  abstract: True
+  abstract: true
+  parent: [ClothingOuterEVASuitBase, GeigerCounterClothing]
+  id: ClothingOuterHardsuitBase
+  name: base hardsuit
   components:
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: Item
+    size: Ginormous
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.90
+        Radiation: 0.25
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodWinterDefault
     slot: head
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
-      storagebase: !type:Container
-        ents: []
-
-- type: entity
-  abstract: true
-  parent: ClothingOuterBase
-  id: ClothingOuterBaseMedium
-  components:
-  - type: Item
-    size: Large
-    shape:
-    - 0,0,2,3
+  - type: GroupExamine
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
