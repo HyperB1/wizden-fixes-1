@@ -5,16 +5,7 @@
   components:
   - type: Item
     size: Small
-    storedRotation: 90
   - type: Handcuff
-    cuffedRSI: Objects/Misc/handcuffs.rsi
-    bodyIconState: body-overlay
-  - type: Sprite
-    sprite: Objects/Misc/handcuffs.rsi
-    state: handcuff
-  - type: Tag
-    tags:
-    - Handcuffs
   - type: MeleeWeapon
     wideAnimationRotation: 90
     resetOnHandSelected: false
@@ -28,6 +19,9 @@
     - Antagonists
   - type: UseDelay
     delay: 3
+  - type: Tag
+    tags:
+    - Handcuffs
 
 - type: entity
   name: handcuffs
@@ -35,6 +29,14 @@
   id: Handcuffs
   parent: BaseHandcuffs
   components:
+  - type: Handcuff
+    cuffedRSI: Objects/Misc/handcuffs.rsi
+    bodyIconState: body-overlay
+  - type: Sprite
+    sprite: Objects/Misc/handcuffs.rsi
+    state: handcuff
+  - type: Item
+    storedRotation: 90
   - type: UseDelay
     delay: 15
 
@@ -85,7 +87,6 @@
   components:
   - type: Item
     size: Tiny
-    storedRotation: 0
   - type: Handcuff
     breakoutTime: 3
     cuffedRSI: Objects/Misc/cablecuffs.rsi  # cablecuffs will look fine
